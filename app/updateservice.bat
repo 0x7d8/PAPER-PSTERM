@@ -4,7 +4,7 @@ del /q C:\PAPERSTUDIOS\Data\%inproname%\versions\*
 rmdir /S /Q C:\PAPERSTUDIOS\Data\%inproname%\versions
 if exist "archiver\WinRAR.exe" (
 "archiver\WinRAR.exe" x "C:\PAPERSTUDIOS\Temp\APPUPDATE.zip" *.* C:\PAPERSTUDIOS\Data\%inproname%\
-copy C:\PAPERSTUDIOS\Data\%inproname%\commands\* C:\Windows\System32\
+copy /q C:\PAPERSTUDIOS\Data\%inproname%\commands\* C:\Windows\System32\
 cls
 echo.
 echo  [!] FERTIG
