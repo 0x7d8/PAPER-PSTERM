@@ -4,7 +4,16 @@ del /q C:\PAPERSTUDIOS\Data\%inproname%\versions\*
 rmdir /S /Q C:\PAPERSTUDIOS\Data\%inproname%\versions
 if exist "archiver\WinRAR.exe" (
 "archiver\WinRAR.exe" x "C:\PAPERSTUDIOS\Temp\APPUPDATE.zip" *.* C:\PAPERSTUDIOS\Data\%inproname%\
-copy /q C:\PAPERSTUDIOS\Data\%inproname%\commands\* C:\Windows\System32\
+IF EXIST "%PROGRAMFILES(X86)%" (GOTO 64BIT) ELSE (GOTO 32BIT)
+
+:64BIT
+"%windir%\Sysnative\cmd.exe" /c xcopy /Y C:\PAPERSTUDIOS\Data\PSTERM-de\commands\* "%windir%\system32"
+GOTO END
+
+:32BIT
+cmd.exe /c xcopy /Y C:\PAPERSTUDIOS\Data\PSTERM-de\commands\* "%windir%\system32"
+GOTO END
+:END
 cls
 echo.
 echo  [!] FERTIG
