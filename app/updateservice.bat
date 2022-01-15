@@ -9,11 +9,15 @@ if exist "archiver\WinRAR.exe" (
 IF EXIST "%PROGRAMFILES(X86)%" (GOTO 64BIT) ELSE (GOTO 32BIT)
 
 :64BIT
-"%windir%\Sysnative\cmd.exe" /c xcopy /Y C:\PAPERSTUDIOS\Data\PSTERM-de\commands\* "%windir%\system32"
+"%windir%\Sysnative\cmd.exe" /c xcopy /Y C:\PAPERSTUDIOS\Data\PSTERM-de\commands\settings.cmd "%windir%\system32"
+"%windir%\Sysnative\cmd.exe" /c xcopy /Y C:\PAPERSTUDIOS\Data\PSTERM-de\commands\upai.cmd "%windir%\system32"
+"%windir%\Sysnative\cmd.exe" /c xcopy /Y C:\PAPERSTUDIOS\Data\PSTERM-de\commands\home.cmd "%windir%\system32"
 GOTO END
 
 :32BIT
-cmd.exe /c xcopy /Y C:\PAPERSTUDIOS\Data\PSTERM-de\commands\* "%windir%\system32"
+cmd.exe /c xcopy /Y C:\PAPERSTUDIOS\Data\PSTERM-de\commands\settings.cmd "%windir%\system32"
+cmd.exe /c xcopy /Y C:\PAPERSTUDIOS\Data\PSTERM-de\commands\upai.cmd "%windir%\system32"
+cmd.exe /c xcopy /Y C:\PAPERSTUDIOS\Data\PSTERM-de\commands\home.cmd "%windir%\system32"
 GOTO END
 :END
 cls
