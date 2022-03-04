@@ -18,7 +18,7 @@ rmdir /S /Q C:\PAPERSTUDIOS\Data\%inproname%\commands
 cls
 echo.
 echo  [i] FALLS FEHLER IN DER NEUEN VERSION AUFTRETEN,
-echo      KOENNEN SIE DIE IN UPAAI UNTER FORMS MELDEN
+echo      KOENNEN SIE DIE IN UPAI UNTER FORMS MELDEN
 PING localhost -n 6 >NUL
 if exist "archiver\WinRAR.exe" (
 "archiver\WinRAR.exe" x "C:\PAPERSTUDIOS\Temp\APPUPDATE.zip" *.* C:\PAPERSTUDIOS\Data\%inproname%\
